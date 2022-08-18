@@ -14,11 +14,11 @@ type PaymentContainerProps = {
 const PaymentInfoMap: Record<string, { title: string; description: string }> = {
   paypal: {
     title: "PayPal",
-    description: "Secure payment with PayPal",
+    description: "Pago seguro con PayPal.",
   },
   manual: {
-    title: "Test payment",
-    description: "Test payment using medusa-payment-manual",
+    title: "Pago de prueba",
+    description: "Prueba de pago usando pago manual de Medusa JS.",
   },
 }
 
