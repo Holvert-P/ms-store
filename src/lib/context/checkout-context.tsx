@@ -230,7 +230,7 @@ export const CheckoutProvider = ({ children }: CheckoutProviderProps) => {
   }
 
   /**
-   * Method to set the selected payment session for the cart. This is called when the user selects a payment provider, such as Stripe, PayPal, etc.
+   * Method to set the selected payment session for the cart. This is called when the user selects a payment provider, such as PayPal, etc.
    */
   const setPaymentSession = (providerId: string) => {
     if (cart) {
