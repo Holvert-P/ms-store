@@ -153,54 +153,54 @@ const EditAddress: React.FC<EditAddressProps> = ({
           <div className="grid grid-cols-1 gap-y-2">
             <div className="grid grid-cols-2 gap-x-2">
               <Input
-                label="First name"
+                label="Nombre"
                 {...register("first_name", {
-                  required: "First name is required",
+                  required: "Nombre es requerido",
                 })}
                 required
                 errors={errors}
                 autoComplete="given-name"
               />
               <Input
-                label="Last name"
+                label="Apellido"
                 {...register("last_name", {
-                  required: "Last name is required",
+                  required: "Apellido es requerido",
                 })}
                 required
                 errors={errors}
                 autoComplete="family-name"
               />
             </div>
-            <Input label="Company" {...register("company")} errors={errors} />
+            <Input label="Compañia" {...register("company")} errors={errors} />
             <Input
-              label="Address"
+              label="Dirección"
               {...register("address_1", {
-                required: "Address is required",
+                required: "Dirección es requerida",
               })}
               required
               errors={errors}
               autoComplete="address-line1"
             />
             <Input
-              label="Apartment, suite, etc."
+              label="Apartmento, suite, etc."
               {...register("address_2")}
               errors={errors}
               autoComplete="address-line2"
             />
             <div className="grid grid-cols-[144px_1fr] gap-x-2">
               <Input
-                label="Postal code"
+                label="Cód. postal"
                 {...register("postal_code", {
-                  required: "Postal code is required",
+                  required: "Código postal es requerido",
                 })}
                 required
                 errors={errors}
                 autoComplete="postal-code"
               />
               <Input
-                label="City"
+                label="Ciudad"
                 {...register("city", {
-                  required: "City is required",
+                  required: "Ciudad es requerida",
                 })}
                 errors={errors}
                 required
@@ -208,7 +208,7 @@ const EditAddress: React.FC<EditAddressProps> = ({
               />
             </div>
             <Input
-              label="Province / State"
+              label="Departamento"
               {...register("province")}
               errors={errors}
               autoComplete="address-level1"
@@ -218,7 +218,7 @@ const EditAddress: React.FC<EditAddressProps> = ({
               autoComplete="country"
             />
             <Input
-              label="Phone"
+              label="Teléfono"
               {...register("phone")}
               errors={errors}
               autoComplete="phone"
@@ -230,10 +230,10 @@ const EditAddress: React.FC<EditAddressProps> = ({
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={close}>
-            Cancel
+            Cancelar
           </Button>
           <Button onClick={submit} disabled={submitting}>
-            Save
+            Guardar
             {submitting && <Spinner />}
           </Button>
         </Modal.Footer>

@@ -51,33 +51,33 @@ const Register = () => {
       <form className="w-full flex flex-col" onSubmit={onSubmit}>
         <div className="flex flex-col w-full gap-y-2">
           <Input
-            label="First name"
-            {...register("first_name", { required: "First name is required" })}
+            label="Nombre"
+            {...register("first_name", { required: "Nombre es requerido" })}
             autoComplete="given-name"
             errors={errors}
           />
           <Input
-            label="Last name"
-            {...register("last_name", { required: "Last name is required" })}
+            label="Apellido"
+            {...register("last_name", { required: "Apellido es requerido" })}
             autoComplete="family-name"
             errors={errors}
           />
           <Input
-            label="Email"
-            {...register("email", { required: "Email is required" })}
+            label="Correo"
+            {...register("email", { required: "Correo es requerido" })}
             autoComplete="email"
             errors={errors}
           />
           <Input
-            label="Phone"
+            label="Teléfono"
             {...register("phone")}
             autoComplete="tel"
             errors={errors}
           />
           <Input
-            label="Password"
+            label="Contraseña"
             {...register("password", {
-              required: "Password is required",
+              required: "Contraseña es requerida",
             })}
             type="password"
             autoComplete="new-password"
@@ -87,30 +87,30 @@ const Register = () => {
         {authError && (
           <div>
             <span className="text-rose-500 w-full text-small-regular">
-              These credentials do not match our records
+              Estas credenciales no coinciden con nuestros registros
             </span>
           </div>
         )}
         <span className="text-center text-gray-700 text-small-regular mt-6">
-          By creating an account, you agree to Acme&apos;s{" "}
+          Al crear una cuenta, acepta las{" "}
           <Link href="/content/privacy-policy">
-            <a className="underline">Privacy Policy</a>
+            <a className="underline">Políticas de privacidad</a>
           </Link>{" "}
-          and{" "}
+          de Mia Secret y{" "}
           <Link href="/content/terms-of-use">
-            <a className="underline">Terms of Use</a>
+            <a className="underline">Terminos de uso</a>
           </Link>
           .
         </span>
-        <Button className="mt-6">Join</Button>
+        <Button className="mt-6">Unirse</Button>
       </form>
       <span className="text-center text-gray-700 text-small-regular mt-6">
-        Already a member?{" "}
+        ¿Ya eres usuario?{" "}
         <button
           onClick={() => setCurrentView(LOGIN_VIEW.SIGN_IN)}
           className="underline"
         >
-          Sign in
+          Iniciar sesión
         </button>
         .
       </span>
